@@ -4,9 +4,9 @@ import { hexToRGB, getContrastColor, isHexColor } from './utilits';
 
 
 function ColorForm() {
-  const [FormState, setColor] = useState('#FFFFFF');
-  const [state, setState] = useState('true');
-  // console.log(FormState)
+  const [formState, setColor] = useState('#FFFFFF');
+  const [state, setState] = useState(true);
+  // console.log(formState)
 
   const onChange = (event) => {
     
@@ -32,8 +32,8 @@ function ColorForm() {
     }
   };
 
-  const background = getContrastColor(FormState);
-  const rezult = hexToRGB(FormState)
+  const background = getContrastColor(formState);
+  const rezult = hexToRGB(formState)
   // console.log(rezult)
 
   return (
@@ -42,7 +42,7 @@ function ColorForm() {
         <input
           className="ColorInput"
           name="color"
-          value={FormState}
+          value={formState}
           state={state}
           onChange={onChange}
         />
